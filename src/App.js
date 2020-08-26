@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Hello from './Hello' //상대경로로 불러옴 .js는 생략가능
+import './App.css'
 
 function App() {
+  const lorem = 'Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts'
+  const myStyle = {
+    background: 'black',
+    color: 'white',
+    fontSize: 24,
+    lineHeight: '1em',
+    padding: 20
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div style={myStyle}>{lorem}</div>
+      <div className="gray-box"></div>
+      <Hello />
+    </>
   );
 }
 
